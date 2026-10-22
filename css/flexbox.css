@@ -1,0 +1,114 @@
+/* =========================================================
+   flexbox.css — PARTE 1: Flexbox
+   Escreva aqui os estilos dos blocos abaixo, seguindo o roteiro.
+   ========================================================= */
+
+/* ---------- 1. TOPO: logo | menu | botão ---------- */
+/* .topo, .topo-conteudo, .menu ul */
+.topo {
+   position: sticky;
+   top: 0;
+   z-index: 10;
+   background: rgb(14, 14, 15, 0.92);
+   backdrop-filter: blur(8px);
+   border-bottom: 1px solid var(--cinza);
+}
+
+.topo-conteudo {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 1.5rem;
+   padding-block: 1rem;
+}
+
+.menu ul {
+   display: flex;
+   gap: 2rem;
+}
+
+.menu a {
+   font-style: 0.88rem;
+   font-weight: 500;
+   transition: color 0.25;
+}
+
+.menu a:hover {
+   color: var(--ouro);
+}
+
+/* ---------- 2. HERO: texto | imagem ---------- */
+/* .hero-conteudo, .hero-texto, .hero-imagem, .hero-botoes, .hero-numeros */
+.hero {
+   padding: 5rem 0 6rem 0;
+}
+
+.hero-conteudo {
+   display: flex;
+   align-items: center;
+   gap: 4rem;
+}
+
+.hero-texto {
+   flex: 1 1 50%;
+}
+
+.hero-texto h1 {
+   margin-bottom: 1.4rem;
+}
+
+.hero-descricao {
+   max-width: 480px;
+   margin-bottom: 2rem;
+}
+
+.hero-botoes {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+   margin-bottom: 3rem;
+}
+
+.hero-imagem {
+   flex: 1 1 42%;
+}
+
+.hero-imagem img {
+   width: 100%;
+   aspect-ratio: 4/5;
+   object-fit: cover;
+   border-radius: 200px 200px var(--raio) var(--raio);
+   box-shadow: 0 30px 60px rgb(0, 0, 0, 0.5);
+}
+
+.hero-numeros {
+   display: flex;
+   gap: 2.5rem;
+   padding-top: 1.8rem;
+   border-top: 0 30px 1px solid var(--cinza);
+}
+
+.hero-numeros li {
+   display: flex;
+   flex-direction: column;
+}
+
+.hero-numeros strong {
+   font-family: var(--fonte-titulo);
+   font-size: 1.9rem;
+   color: var(--ouro);
+}
+
+.hero-numeros span {
+   font-size: 0.8srem;
+}
+/* ---------- 3. CARDS DE SERVIÇOS ---------- */
+/* .cards-servicos, .card-servico, .card-rodape */
+
+
+/* ---------- 4. PLANOS ---------- */
+/* .planos, .plano, .plano-destaque */
+
+
+/* ---------- 5. RODAPÉ ---------- */
+/* .rodape-conteudo, .rodape-contato, .rodape-links */

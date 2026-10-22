@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corte Fino | Barbearia Clássica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/flexbox.css">
+  <link rel="stylesheet" href="css/grid.css">
+</head>
+<body>
+
+  <!-- ================= TOPO ================= -->
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a href="#inicio" class="logo">Corte<span>Fino</span></a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#clube">Clube</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+        </ul>
+      </nav>
+      <a href="#agenda" class="btn btn-ouro">Agendar horário</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero-conteudo">
+        <div class="hero-texto">
+          <p class="eyebrow">Barbearia clássica desde 2013</p>
+          <h1>Estilo afiado,<br>tradição em cada <em>detalhe</em>.</h1>
+          <p class="hero-descricao">Cortes de precisão, barba com toalha quente e um ambiente feito para você desacelerar. Aqui o tempo passa devagar e o resultado fala alto.</p>
+          <div class="hero-botoes">
+            <a href="#agenda" class="btn btn-ouro">Agendar agora</a>
+            <a href="#servicos" class="btn btn-contorno">Ver serviços</a>
+          </div>
+          <ul class="hero-numeros">
+            <li><strong>12</strong><span>anos de tradição</span></li>
+            <li><strong>+8 mil</strong><span>clientes atendidos</span></li>
+            <li><strong>4,9</strong><span>nota média</span></li>
+          </ul>
+        </div>
+        <figure class="hero-imagem">
+          <img src="img/hero.jpg" alt="Barbeiro finalizando um corte na cadeira clássica da Corte Fino">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= SERVIÇOS (Flexbox) ================= -->
+    <section class="secao" id="servicos">
+      <div class="container">
+        <header class="secao-cabecalho">
+          <p class="eyebrow">O que fazemos</p>
+          <h2>Serviços de assinatura</h2>
+          <p>Cada atendimento é pensado do começo ao fim: consulta rápida, execução com calma e acabamento impecável.</p>
+        </header>
+
+        <div class="cards-servicos">
+          <article class="card-servico">
+            <span class="card-numero">01</span>
+            <h3>Corte Clássico</h3>
+            <p>Tesoura e máquina, acabamento na navalha e finalização com pomada de sua preferência.</p>
+            <div class="card-rodape">
+              <div class="card-preco"><strong>R$ 55</strong><small>45 min</small></div>
+              <a href="#agenda" class="btn btn-contorno btn-pequeno">Agendar</a>
+            </div>
+          </article>
+
+          <article class="card-servico">
+            <span class="card-numero">02</span>
+            <h3>Degradê Navalhado</h3>
+            <p>Transição suave feita à mão, com desenho preciso nas laterais e contorno na navalha.</p>
+            <div class="card-rodape">
+              <div class="card-preco"><strong>R$ 65</strong><small>50 min</small></div>
+              <a href="#agenda" class="btn btn-contorno btn-pequeno">Agendar</a>
+            </div>
+          </article>
+
+          <article class="card-servico">
+            <span class="card-numero">03</span>
+            <h3>Barba Premium</h3>
+            <p>Toalha quente, óleo pré-barba, navalha e hidratação final. Um ritual completo para a barba.</p>
+            <div class="card-rodape">
+              <div class="card-preco"><strong>R$ 45</strong><small>30 min</small></div>
+              <a href="#agenda" class="btn btn-contorno btn-pequeno">Agendar</a>
+            </div>
+          </article>
+
+          <article class="card-servico card-destaque">
+            <span class="card-selo">Mais pedido</span>
+            <span class="card-numero">04</span>
+            <h3>Combo Corte + Barba</h3>
+            <p>O pacote completo: corte, barba premium e cortesia de bebida. Economia e tempo na mesma cadeira.</p>
+            <div class="card-rodape">
+              <div class="card-preco"><strong>R$ 95</strong><small>1h20</small></div>
+              <a href="#agenda" class="btn btn-ouro btn-pequeno">Agendar</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CLUBE (Flexbox) ================= -->
+    <section class="secao secao-escura" id="clube">
+      <div class="container">
+        <header class="secao-cabecalho">
+          <p class="eyebrow">Clube Corte Fino</p>
+          <h2>Assine e cuide do visual o mês todo</h2>
+          <p>Planos mensais com horário prioritário e preço fixo. Cancele quando quiser.</p>
+        </header>
+
+        <div class="planos">
+          <article class="plano">
+            <h3>Essencial</h3>
+            <p class="plano-preco"><strong>R$ 119</strong>/mês</p>
+            <ul class="plano-lista">
+              <li>2 cortes por mês</li>
+              <li>Agendamento prioritário</li>
+              <li>10% em produtos</li>
+            </ul>
+            <a href="#contato" class="btn btn-contorno">Assinar Essencial</a>
+          </article>
+
+          <article class="plano plano-destaque">
+            <span class="card-selo">Recomendado</span>
+            <h3>Fino</h3>
+            <p class="plano-preco"><strong>R$ 189</strong>/mês</p>
+            <ul class="plano-lista">
+              <li>4 cortes por mês</li>
+              <li>2 barbas premium</li>
+              <li>Bebida cortesia em toda visita</li>
+              <li>15% em produtos</li>
+            </ul>
+            <a href="#contato" class="btn btn-ouro">Assinar Fino</a>
+          </article>
+
+          <article class="plano">
+            <h3>Black</h3>
+            <p class="plano-preco"><strong>R$ 279</strong>/mês</p>
+            <ul class="plano-lista">
+              <li>Cortes e barbas ilimitados</li>
+              <li>Horário reservado fixo</li>
+              <li>Kit de produtos todo mês</li>
+              <li>20% em produtos</li>
+            </ul>
+            <a href="#contato" class="btn btn-contorno">Assinar Black</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERIA (Grid - bento) ================= -->
+    <section class="secao" id="galeria">
+      <div class="container">
+        <header class="secao-cabecalho">
+          <p class="eyebrow">Portfólio</p>
+          <h2>Trabalhos que falam por si</h2>
+          <p>Uma amostra dos cortes, barbas e do clima da casa.</p>
+        </header>
+
+        <div class="bento">
+          <figure class="bento-item bento-1">
+            <img src="img/galeria-1.jpg" alt="Degradê navalhado com acabamento perfeito">
+            <figcaption>Degradê navalhado</figcaption>
+          </figure>
+          <figure class="bento-item bento-2">
+            <img src="img/galeria-2.jpg" alt="Barba alinhada com navalha">
+            <figcaption>Barba alinhada</figcaption>
+          </figure>
+          <figure class="bento-item bento-3">
+            <img src="img/galeria-3.jpg" alt="Ferramentas clássicas de barbearia sobre bancada">
+            <figcaption>Ferramentas de mestre</figcaption>
+          </figure>
+          <figure class="bento-item bento-4">
+            <img src="img/galeria-4.jpg" alt="Toalha quente sendo aplicada em cliente">
+            <figcaption>Toalha quente</figcaption>
+          </figure>
+          <figure class="bento-item bento-5">
+            <img src="img/galeria-5.jpg" alt="Prateleira com pomadas e óleos para barba">
+            <figcaption>Linha de produtos Corte Fino</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AMBIENTE (Grid - areas) ================= -->
+    <section class="secao secao-escura" id="ambiente">
+      <div class="container ambiente">
+        <h2 class="amb-titulo">Um ambiente pensado para desacelerar</h2>
+        <p class="amb-texto">A Corte Fino nasceu da vontade de resgatar o ritual da barbearia clássica: couro, madeira, boa música e atendimento sem pressa. Aqui você chega, relaxa e sai com a confiança lá em cima.</p>
+        <ul class="amb-numeros">
+          <li><strong>6</strong><span>cadeiras clássicas</span></li>
+          <li><strong>3</strong><span>mestres barbeiros</span></li>
+          <li><strong>100%</strong><span>horário marcado</span></li>
+        </ul>
+        <figure class="amb-imagem">
+          <img src="img/ambiente.jpg" alt="Interior da barbearia com cadeiras de couro e iluminação quente">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= EQUIPE (Grid - auto-fit) ================= -->
+    <section class="secao" id="equipe">
+      <div class="container">
+        <header class="secao-cabecalho">
+          <p class="eyebrow">Quem cuida de você</p>
+          <h2>Nossos mestres barbeiros</h2>
+          <p>Profissionais com anos de estrada e olho clínico para o seu estilo.</p>
+        </header>
+
+        <div class="equipe">
+          <article class="barbeiro">
+            <img src="img/barbeiro-1.jpg" alt="Rafael, mestre barbeiro">
+            <div class="barbeiro-info">
+              <h3>Rafael &ldquo;Rafa&rdquo; Moura</h3>
+              <p class="barbeiro-funcao">Barba clássica</p>
+              <p>14 anos de ofício. Especialista em toalha quente e barba na navalha.</p>
+            </div>
+          </article>
+          <article class="barbeiro">
+            <img src="img/barbeiro-2.jpg" alt="Diego, barbeiro especialista em degradê">
+            <div class="barbeiro-info">
+              <h3>Diego Alves</h3>
+              <p class="barbeiro-funcao">Degradê e fade</p>
+              <p>Referência em transições perfeitas e cortes modernos.</p>
+            </div>
+          </article>
+          <article class="barbeiro">
+            <img src="img/barbeiro-3.jpg" alt="Marcos, barbeiro especialista em visagismo">
+            <div class="barbeiro-info">
+              <h3>Marcos Tavares</h3>
+              <p class="barbeiro-funcao">Visagismo</p>
+              <p>Analisa o formato do rosto para indicar o corte que mais combina com você.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AGENDA (Grid - tabela de horários) ================= -->
+    <section class="secao secao-escura" id="agenda">
+      <div class="container">
+        <header class="secao-cabecalho">
+          <p class="eyebrow">Agenda da semana</p>
+          <h2>Escolha seu horário</h2>
+          <p>Horários em dourado estão livres. Clique para reservar.</p>
+        </header>
+
+        <div class="agenda-rolagem">
+          <div class="agenda">
+          <span class="agenda-canto">Horário</span>
+          <span class="agenda-dia">Seg</span>
+          <span class="agenda-dia">Ter</span>
+          <span class="agenda-dia">Qua</span>
+          <span class="agenda-dia">Qui</span>
+          <span class="agenda-dia">Sex</span>
+          <span class="agenda-dia">Sáb</span>
+          <span class="agenda-hora">09:00</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="slot ocupado">Ocupado</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="slot ocupado">Ocupado</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="agenda-hora">11:00</span>
+          <span class="slot ocupado">Ocupado</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <a class="slot livre" href="#contato">Livre</a>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="slot ocupado">Ocupado</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="agenda-hora">14:00</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="slot ocupado">Ocupado</span>
+          <span class="slot ocupado">Ocupado</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="agenda-hora">16:00</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="slot ocupado">Ocupado</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <a class="slot livre" href="#contato">Livre</a>
+          <a class="slot livre" href="#contato">Livre</a>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="agenda-hora">18:00</span>
+          <span class="slot ocupado">Ocupado</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="slot ocupado">Ocupado</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          <span class="slot ocupado">Ocupado</span>
+          <a class="slot livre" href="#contato">Livre</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= RODAPÉ (Flexbox) ================= -->
+  <footer class="rodape" id="contato">
+    <div class="container rodape-conteudo">
+      <div class="rodape-marca">
+        <a href="#inicio" class="logo">Corte<span>Fino</span></a>
+        <p>Barbearia clássica. Atendimento com hora marcada.</p>
+      </div>
+      <address class="rodape-contato">
+        <p>Rua das Palmeiras, 248 &ndash; Centro</p>
+        <p>Seg a Sáb, 9h às 19h</p>
+        <p><a href="mailto:contato@cortefino.example">contato@cortefino.example</a></p>
+      </address>
+      <ul class="rodape-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#clube">Clube</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+      </ul>
+    </div>
+    <p class="rodape-copy">&copy; 2026 Corte Fino. Projeto fictício para fins didáticos.</p>
+  </footer>
+
+</body>
+</html>
