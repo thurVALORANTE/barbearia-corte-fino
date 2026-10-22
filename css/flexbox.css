@@ -102,13 +102,183 @@
 .hero-numeros span {
    font-size: 0.8srem;
 }
+
 /* ---------- 3. CARDS DE SERVIÇOS ---------- */
 /* .cards-servicos, .card-servico, .card-rodape */
+.cards-servicos {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
 
+.card-servico {
+   position: relative;
+   flex: 1 1 240px;
+   display: flex;
+   flex-direction: column;
+   gap: 0.9rem;
+   padding: 2rem 1.7rem;
+   border: 1px solid var(--cinza);
+   background: var(--grafite);
+   transition: transform 0.25s, border-color 0.25s;
+}
+
+.card-servico:hover {
+   transform: translateY(-6px);
+   border-color: var(--ouro);
+}
+
+.card-numero {
+   position: absolute;
+   top: 1.5rem;
+   right: 1.5rem;
+   font-family: var(--fonte-titulo);
+   font-size: 2.5rem;
+   color: var(--ouro);
+}
+
+.card-rodape {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: auto;
+   padding-top: 1.2rem;
+   border-top: 1px solid var(--cinza);
+}
+
+.card-preco {
+   display: flex;
+   flex-direction: column;
+}
+
+.card-preco strong {
+   font-size: 1.4rem;
+   color: var(--creme);
+}
+
+.card-preco small {
+   font-size: 0.75rem;
+   color: var(--cinza);
+}
+
+.card-destaque {
+   border-color: var(--ouro);
+   background: linear-gradient(160deg, #221d12 ,var(--grafite));
+}
+
+.card-destaque .card-selo {
+   position: absolute;
+   top: 1.2rem;
+   right: 1.2rem;
+}
 
 /* ---------- 4. PLANOS ---------- */
 /* .planos, .plano, .plano-destaque */
+.planos {
+   display: flex;
+   align-items: stretch;
+   gap: 1.5rem;
+}
 
+.plano {
+   position: relative;
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 1.1rem;
+   padding: 2.2rem 2rem;
+   background: var(--preto);
+   border-radius: var(--raio);
+}
+
+.plano-preco strong {
+   font-family: var(--fonte-titulo);
+   font-size: 2.5rem;
+   color: var(--creme);
+}
+
+.plano-lista {
+   display: flex;
+   flex-direction: column;
+   gap: 0.7rem;
+   margin-top: 1.6rem;
+}
+
+.plano-lista li {
+   padding-left: 1.6rem;
+   position: relative;
+   font-size: 0.92rem;
+}
+
+.plano-lista li::before {
+   content: "✓";
+   position: absolute;
+   left: 0;
+   color: var(--ouro);
+   font-weight: 700;
+}
+
+.plano .btn{
+   margin-top: auto;
+}
+
+.plano-destaque {
+   border-color: var(--ouro);
+   transform: scale(1.05);
+   box-shadow: 0 25px 50px rgb(251, 164, 92, 0.12);
+} 
+
+.plano-destaque .card-selo {
+   align-self: flex-start;
+}
 
 /* ---------- 5. RODAPÉ ---------- */
 /* .rodape-conteudo, .rodape-contato, .rodape-links */
+.rodape {
+   background: #09090a;
+   padding-top: 4rem;
+   border-top: 1px solid var(--cinza);
+}
+
+.rodape-conteudo {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 2.5rem;
+   padding-bottom: 3rem;
+}
+
+.rodape-marca {
+   max-width: 200px;
+   display: flex;
+   flex-direction: column;
+   gap: 0.8;
+}
+
+.rodape-contato {
+   display: flex;
+   flex-direction: column;
+   gap: 0.4rem;
+   font-size: 0.92rem;
+}
+
+.rodape-contato a:hover,
+.rodape-links a:hover
+{
+   color: var(--ouro);
+}
+
+.rodape-links {
+   display: flex;
+   flex-direction: column;
+   gap: 0.6rem;
+   font-size: 0.92rem;
+}
+
+.rodape-copy {
+   text-align: center;
+   padding-block: 1.4rem;
+   border-top: 1px solid var(--cinza);
+   font-size: 0.8rem;
+}
+
