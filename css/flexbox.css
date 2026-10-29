@@ -252,7 +252,7 @@
    max-width: 200px;
    display: flex;
    flex-direction: column;
-   gap: 0.8;
+   gap: 0.8rem;
 }
 
 .rodape-contato {
@@ -281,4 +281,7 @@
    border-top: 1px solid var(--cinza);
    font-size: 0.8rem;
 }
+
+
+
 
