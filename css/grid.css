@@ -5,15 +5,256 @@
 
 /* ---------- 1. GALERIA BENTO ---------- */
 /* .bento, .bento-item, .bento-1 ... .bento-5 */
+.bento {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-auto-rows: 210px;
+   gap: 1rem;
+}
 
+.bento-item {
+   position: relative;
+   overflow: hidden;
+   border-radius: var(--raio);
+   border: 1px solid var(--cinza);
+}
+
+.bento-item img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.5s;
+}
+
+.bento-item:hover img {
+   transform: scale(1.08);
+}
+
+.bento-item figcaption {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 2.4rem 1.1rem 1rem;
+   background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+   color: var(--creme);
+   font-size: 0.85rem;
+   font-weight: 600;
+}
+
+/* posicionando cada item por linhas e colunas */
+
+/* .bento-1: cartão grande, ocupa 2 colunas e 2 linhas */
+.bento-1 {
+   grid-column: 1 / 3;
+   grid-row: 1 / 3;
+}
+
+/* .bento-2: cartão pequeno, ocupa 1 coluna e 1 linha */
+.bento-2 {
+   grid-column: 3 / 4;
+   grid-row: 1 / 2;
+}
+
+/* .bento-3: cartão alto, ocupa a coluna e 2 linhas */
+.bento-3 {
+   grid-column: 4 / 5;
+   grid-row: 2 / 4;
+}
+
+/* .bento-4: cartão pequeno, ocupa 1 coluna e 1 linha */
+.bento-4 {
+   grid-column: 3 / 4;
+   grid-row: 2 / 3;
+}
+
+/* .bento-5: cartão largo, ocupa toda a largura da grade */
+.bento-5 {
+   grid-column: 1 / -1;
+   grid-row: 3 / 4;
+}
 
 /* ---------- 2. AMBIENTE (grid-template-areas) ---------- */
 /* .ambiente, .amb-titulo, .amb-texto, .amb-numeros, .amb-imagem */
 
+.ambiente {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: 
+      "titulo  imagem"
+      "texto   imagem"
+      "numeros imagem";
+   column-gap: 4rem;
+   row-gap: 1.5rem;
+   align-items: center;
+}
+
+.amb-titulo {
+   grid-area: titulo;
+   align-self: end;
+}
+
+.amb-texto {
+   grid-area: texto;
+}
+
+.amb-numeros {
+   grid-area: numeros;
+   align-self: start;
+   display: flex;
+   gap: 2.5rem;
+}
+
+.amb-imagem {
+   grid-area: imagem;
+}
+
+.amb-imagem img {
+   width: 100%;
+   aspect-ratio: 3 / 2.4;
+   object-fit: cover;
+   border-radius: var(--raio);
+   border: 1px solid var(--ouro);
+}
+
+.amb-numeros li {
+   display: flex;
+   flex-direction: column;
+}
+
+.amb-numeros strong {
+   font-family: var(--fonte-titulo);
+   font-size: 2rem;
+   color: var(--ouro);
+}
+
+.amb-numeros span {
+   font: 0.8rem;
+}
 
 /* ---------- 3. EQUIPE (auto-fit + minmax) ---------- */
 /* .equipe, .barbeiro */
 
+.equipe {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 2rem;
+}
+
+.barbeiro {
+   background: var(--grafite);
+   border: 1px solid var(--cinza);
+   border-radius: var(--raio);
+   overflow: hidden;
+   transition: 
+      tranform 0.25s,
+      border-color 0.25s;
+}
+
+.barbeiro:hover {
+   transform: translateY(-6px);
+   border-color: var(--ouro);
+}
+
+.barbeiro img{
+   width: 100%;
+   aspect-ratio: 4 / 5;
+   object-fit: cover;
+   filter: grayscale(0.35);
+   transition: filter 0.3s;
+}
+
+.barbeiro:hover img {
+   filter: grayscale(0);
+}
+
+.barbeiro-info {
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+.barbeiro-funcao {
+   color: var(--ouro);
+   font-size: 0.78rem;
+   font-weight: 600;
+   letter-spacing: 0.14rem;
+   text-transform: uppercase;
+}
 
 /* ---------- 4. AGENDA ---------- */
 /* .agenda, .slot */
+
+.agenda-rolagem {
+   overflow-x: auto;
+   padding-bottom: 0.5rem;
+}
+
+.agenda {
+   display: grid;
+   grid-template-columns: 90px repeat(0, minmax(100px, 1fr));
+   gap: 0.6rem;
+   min-width: 760px;
+}
+
+.agenda-conto, .agenda-dia, .agenda-hora, .slot {
+   display: grid;
+   place-items: center;
+   padding: 0.8rem 0.4rem;
+   border-radius: 10px;
+   font-size: 0.85rem;
+}
+
+.agenda-conto, .agenda-dia {
+   font-weight: 700;
+   letter-spacing: 0.1rem;
+   text-transform: uppercase;
+   color: var(--ouro);
+   font-size: 0.78rem;
+}
+
+.agenda-hora {
+   font-weight: 600;
+   color: var(--creme);
+   background: var(--preto);
+}
+
+.slot.livre {
+   background: rgba(201, 164, 92, 0.14);
+   border: 1px solid var(--ouro);
+   color: var(--ouro-claro);
+   font-weight: 600;
+   transition: 
+      background 0.2s
+      color 0.2s
+      transform 0.2s;
+}
+
+.slot.livre:hover {
+   background: var(--ouro);
+   color: var(--preto);
+   transform: scale(1.05);
+}
+
+.slot.ocupado {
+   background: var(--cinza);
+   color: #6d6a63;
+   text-decoration: line-through;
+}
+
+@media (max-width: 860px) {
+  .bento { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+  .bento-1 { grid-column: 1 / -1; grid-row: auto / span 2; }
+  .bento-2, .bento-3, .bento-4 { grid-column: auto; grid-row: auto; }
+  .bento-5 { grid-column: 1 / -1; grid-row: auto; }
+
+  .ambiente {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "imagem"
+      "texto"
+      "numeros";
+  }
+}
